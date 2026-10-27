@@ -6,9 +6,9 @@
 
 ## Technology Stack
 
-| Decision | Choice | Why | Alternatives Considered |
-|---|---|---|---|
-| {{e.g. Language/runtime}} | {{...}} | {{...}} | {{...}} |
+| Decision                  | Choice  | Why     | Alternatives Considered |
+| ------------------------- | ------- | ------- | ----------------------- |
+| {{e.g. Language/runtime}} | {{...}} | {{...}} | {{...}}                 |
 
 ## Components
 
@@ -37,15 +37,15 @@ sequenceDiagram
 
 ## External Integrations
 
-| Integration | MCP-backed path | Fallback path |
-|---|---|---|
-| {{Jira}} | {{MCP server/tool}} | {{direct input / local file}} |
+| Integration | MCP-backed path     | Fallback path                 |
+| ----------- | ------------------- | ----------------------------- |
+| {{Jira}}    | {{MCP server/tool}} | {{direct input / local file}} |
 
 ## Error-Handling Strategy
 
 | Boundary | Failure mode | Behavior |
-|---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| -------- | ------------ | -------- |
+| {{...}}  | {{...}}      | {{...}}  |
 
 ## Security Boundaries
 

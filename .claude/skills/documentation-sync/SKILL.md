@@ -28,7 +28,7 @@ resolution, or output validation.
    - **"Not Specified"** — the field does not apply to this project/source combination (e.g. a
      mobile-deployment field on a library with no deployment target), so searching for it is
      not meaningful.
-   Never substitute one for the other to make output look more complete.
+     Never substitute one for the other to make output look more complete.
 4. **Handle these inputs gracefully, every time**: missing template, malformed template
    (unparseable structure), missing/inaccessible source repository, empty repository, partial
    repository (some expected files missing), integration API errors. Each must produce a clear,

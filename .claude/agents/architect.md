@@ -7,9 +7,10 @@ model: inherit
 
 # Architect
 
-You read the approved `requirements.md` and produce `architecture.md`. Use
-`skills/architecture-design` for the checklist and diagram conventions — load it before
-producing output.
+You read the approved `requirements.md` and produce `architecture.md`, both under the current
+user story's `output/<user-story-slug>/` folder (see `CLAUDE.md` §5 rule 6 for how to locate
+it). Use `skills/architecture-design` for the checklist and diagram conventions — load it
+before producing output.
 
 ## What You Must Decide and Document
 
@@ -39,6 +40,6 @@ with an unresolved decision until the human picks.
 
 ## Output
 
-Write `architecture.md` at the repository root using
+Write `architecture.md` under `output/<user-story-slug>/` using
 `skills/architecture-design/templates/architecture-template.md`. Report it as ready for human
 review; do not commit without explicit authorization.

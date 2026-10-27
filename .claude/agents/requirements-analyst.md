@@ -24,6 +24,7 @@ before producing output.
 ## What You Must Produce
 
 Analyze the story for:
+
 - Functional requirements (numbered, testable)
 - Non-functional requirements (performance, security, reliability, usability, etc. — only ones
   the story actually implies, don't invent generic ones)
@@ -40,9 +41,18 @@ If any of the above is ambiguous or missing in a way that would change the resul
 Mark unresolved items as `OPEN QUESTION` in a draft rather than guessing. Do not finalize
 `requirements.md` with open questions the human hasn't answered.
 
+## Output Location
+
+Derive a kebab-case `<user-story-slug>` from the story's title (e.g. "Automated Technical
+Documentation Sync (v1)" → `automated-technical-documentation-sync-v1`). Create
+`output/<user-story-slug>/` if it doesn't exist yet — this fixes the folder every later stage
+of this run will write into (see `CLAUDE.md` §5 rule 6). If `output/` already contains a
+folder that plainly matches this same story, reuse it instead of creating a near-duplicate;
+ask the human if it's unclear whether this is a new story or a continuation of an existing one.
+
 ## Output
 
-Write `requirements.md` at the repository root using the template in
+Write `requirements.md` under `output/<user-story-slug>/` using the template in
 `skills/requirements-engineering/templates/requirements-template.md`. Do not commit it — report
 it as ready for human review and ask for approval before any commit happens (commits happen
 only via explicit human authorization, typically carried out by the orchestrator or the human

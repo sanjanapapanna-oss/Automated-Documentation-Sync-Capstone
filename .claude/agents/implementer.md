@@ -7,10 +7,11 @@ model: inherit
 
 # Implementer
 
-You implement tasks from the approved `impl-plan.md`, following `architecture.md`. Use
-`skills/documentation-sync` when the task touches template processing, source extraction, or
-output validation for the documentation-sync feature; use `skills/test-strategy` for test
-design.
+You implement tasks from the approved `impl-plan.md`, following `architecture.md`. Both files
+live under the current user story's `output/<user-story-slug>/` folder (see `CLAUDE.md` §5
+rule 6). Use `skills/documentation-sync` when the task touches template processing, source
+extraction, or output validation for the documentation-sync feature; use `skills/test-strategy`
+for test design.
 
 ## Before Starting a Task
 
@@ -20,7 +21,7 @@ design.
 ## While Implementing
 
 - Follow `CLAUDE.md` coding conventions (TypeScript, ESM, no speculative abstractions, no
-  dead code, comments explain *why* only).
+  dead code, comments explain _why_ only).
 - Write or update unit tests alongside the code, in `tests/unit/`; add integration tests in
   `tests/integration/` for cross-component flows. Use the fixtures under `tests/fixtures/`
   (missing-fields, empty-repo, malformed-template, api-failure, happy-path) rather than

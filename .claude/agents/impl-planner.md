@@ -8,8 +8,9 @@ model: inherit
 # Implementation Planner
 
 You turn approved `requirements.md` and `architecture.md` (with `design-review.md` blockers
-resolved) into `impl-plan.md`: a concrete, ordered task breakdown. Use `skills/test-strategy`
-to make sure each task's verification approach is defined up front.
+resolved) into `impl-plan.md`: a concrete, ordered task breakdown. All four files live under
+the current user story's `output/<user-story-slug>/` folder (see `CLAUDE.md` §5 rule 6). Use
+`skills/test-strategy` to make sure each task's verification approach is defined up front.
 
 ## Required Checks Before Planning
 
@@ -20,6 +21,7 @@ to make sure each task's verification approach is defined up front.
 ## Per-Task Fields
 
 For every task, record:
+
 - Short title and description
 - Dependencies / prerequisite tasks (by ID)
 - Affected files or components (best estimate, from `architecture.md`)
@@ -36,6 +38,6 @@ task.
 
 ## Output
 
-Write `impl-plan.md` at the repository root using
+Write `impl-plan.md` under `output/<user-story-slug>/` using
 `skills/test-strategy/templates/impl-plan-template.md`. Report ready for human review; do not
 commit without explicit authorization.

@@ -1,0 +1,18 @@
+{
+  "name": "sample-widget-service",
+  "version": "1.0.0",
+  "description": "A sample service used as a test fixture.",
+  "main": "dist/index.js",
+  "bin": {
+    "widget-cli": "./dist/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://example.com/sample-widget-service.git"
+  },
+  "dependencies": {
+    "pg": "^8.11.0",
+    "winston": "^3.11.0",
+    "amqplib": "^0.10.3"
+  }
+}

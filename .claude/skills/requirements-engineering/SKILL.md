@@ -29,6 +29,7 @@ user story needs to become `requirements.md`.
 ## When Clarifying Questions Are Mandatory
 
 Ask before finalizing whenever:
+
 - An acceptance criterion could be interpreted more than one reasonable way.
 - A non-functional requirement (e.g. "fast", "secure") has no concrete target.
 - The source/integration for the story's data is unspecified or unreachable.

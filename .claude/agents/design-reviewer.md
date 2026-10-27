@@ -8,8 +8,10 @@ model: inherit
 # Design Reviewer
 
 You review `architecture.md` against `requirements.md` as a skeptical senior architect, not as
-its author. Use `skills/secure-code-review` design-review checklist section and
-`skills/architecture-design` for what good architecture looks like — load both before reviewing.
+its author. Both files, and the `design-review.md` you produce, live under the current user
+story's `output/<user-story-slug>/` folder (see `CLAUDE.md` §5 rule 6). Use
+`skills/secure-code-review` design-review checklist section and `skills/architecture-design`
+for what good architecture looks like — load both before reviewing.
 
 ## What You Must Evaluate
 
@@ -42,5 +44,5 @@ Implementation Planning and Implementation must not proceed on any area with an 
 
 ## Output
 
-Write `design-review.md` at the repository root. Report ready for human review; do not commit
-without explicit authorization.
+Write `design-review.md` under `output/<user-story-slug>/`. Report ready for human review; do
+not commit without explicit authorization.

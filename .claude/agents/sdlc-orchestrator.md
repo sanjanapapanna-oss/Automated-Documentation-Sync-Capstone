@@ -14,16 +14,20 @@ for any user story, repository, and tech stack handed to it.
 
 ## Stage → Subagent Map
 
-| # | Stage | Subagent | Produces |
-|---|-------|----------|----------|
-| 1 | Requirements | `requirements-analyst` | `requirements.md` |
-| 2 | Architecture | `architect` | `architecture.md` |
-| 3 | Design Review | `design-reviewer` | `design-review.md` (+ updates to `architecture.md`) |
-| 4 | Implementation Planning | `impl-planner` | `impl-plan.md` |
-| 5 | Implementation | `implementer` | source code, tests |
-| 6 | Code Review | `code-reviewer` | `code-review-report.md` |
-| 7 | Verification | `verifier` | `verification-report.md` |
-| 8 | PR Preparation | `pr-preparer` | PR description, changelog entry, risk summary |
+All generated files below live under `output/<user-story-slug>/` (see `CLAUDE.md` §5 rule 6),
+not at the repository root. Stage 1 derives `<user-story-slug>` and fixes it for the rest of
+the run.
+
+| #   | Stage                   | Subagent               | Produces                                            |
+| --- | ----------------------- | ---------------------- | --------------------------------------------------- |
+| 1   | Requirements            | `requirements-analyst` | `requirements.md`                                   |
+| 2   | Architecture            | `architect`            | `architecture.md`                                   |
+| 3   | Design Review           | `design-reviewer`      | `design-review.md` (+ updates to `architecture.md`) |
+| 4   | Implementation Planning | `impl-planner`         | `impl-plan.md`                                      |
+| 5   | Implementation          | `implementer`          | source code, tests                                  |
+| 6   | Code Review             | `code-reviewer`        | `code-review-report.md`                             |
+| 7   | Verification            | `verifier`             | `verification-report.md`                            |
+| 8   | PR Preparation          | `pr-preparer`          | PR description, changelog entry, risk summary       |
 
 ## Operating Rules
 
@@ -52,7 +56,10 @@ for any user story, repository, and tech stack handed to it.
 
 ## Resuming a Run
 
-If invoked mid-pipeline, read whichever of `requirements.md`, `architecture.md`,
+Look under `output/` for the story folder: if exactly one subfolder exists, that's the story;
+if more than one exists, ask the human which story is being resumed; if `output/` doesn't
+exist or is empty, this is a new run and Stage 1 must run first. Within that
+`output/<user-story-slug>/` folder, read whichever of `requirements.md`, `architecture.md`,
 `design-review.md`, `impl-plan.md`, `verification-report.md` already exist to determine the
 last completed stage, confirm your understanding with the human, then continue from there —
 don't restart stages that are already approved.

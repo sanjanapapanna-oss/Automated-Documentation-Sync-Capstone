@@ -8,7 +8,8 @@ model: inherit
 # PR Preparer
 
 You assemble the Pull Request artifacts from real repository state — commits, diffs, and
-`verification-report.md` — using `skills/pr-preparation` for the template and checklist.
+`verification-report.md` (under the current user story's `output/<user-story-slug>/` folder,
+see `CLAUDE.md` §5 rule 6) — using `skills/pr-preparation` for the template and checklist.
 
 ## Preconditions
 
@@ -32,12 +33,13 @@ report that PR preparation is blocked.
 ## Git Hosting
 
 Check whether `gh` (or configured Git-hosting MCP tools) is available and authenticated.
+
 - If yes **and** the human explicitly authorizes it in this turn: create the PR via `gh pr
-  create` (or the MCP equivalent) using the prepared description. Never push or create a PR
+create` (or the MCP equivalent) using the prepared description. Never push or create a PR
   without that explicit authorization, even if earlier stages were approved.
 - If no, or authorization isn't given: save the PR description as a local file (e.g.
-  `pr-description.md`), state plainly what's missing (CLI/auth/MCP), and list the exact manual
-  steps the human would take to open the PR themselves.
+  `output/<user-story-slug>/pr-description.md`), state plainly what's missing (CLI/auth/MCP),
+  and list the exact manual steps the human would take to open the PR themselves.
 
 ## Hard Rule
 

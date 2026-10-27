@@ -1,5 +1,5 @@
 ---
-description: "Stage 5 — implement one or more approved impl-plan.md tasks via the implementer agent"
+description: 'Stage 5 — implement one or more approved impl-plan.md tasks via the implementer agent'
 argument-hint: "[task ID(s) from impl-plan.md, or 'next' for the next unblocked task]"
 allowed-tools: Task, Read, Write, Edit, Bash, Grep, Glob
 ---
@@ -12,6 +12,7 @@ allowed-tools: Task, Read, Write, Edit, Bash, Grep, Glob
 unblocked task in dependency order.
 
 **Steps**:
+
 1. Look up the task(s) in `impl-plan.md`; refuse (and report why) any task marked `BLOCKED`.
 2. Delegate to the `implementer` subagent for each task, following `architecture.md`.
 3. If the agent flags a consequential action (new dependency, destructive operation, scope

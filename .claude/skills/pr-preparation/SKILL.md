@@ -25,16 +25,19 @@ mandatory checks passing (or documented human-accepted exceptions).
 {{2–3 sentences: what was built and why}}
 
 ## Changes Made
+
 - `{{path}}` — {{reason}}
 
 ## Test Evidence
 {{actual output pulled from verification-report.md; link real CI run only if one exists}}
 
 ## Known Limitations
+
 - {{fields marked "Not Found"/"Not Specified", unresolved issues, unavailable integrations,
   out-of-scope items}}
 
 ## Reviewer Checklist
+
 - [ ] Meets requirements.md acceptance criteria
 - [ ] Matches approved architecture.md
 - [ ] No secrets/credentials introduced
@@ -54,7 +57,8 @@ Append under `## [Unreleased]` in `CHANGELOG.md`, Keep-a-Changelog style
 1. Check for `gh` CLI auth or a configured Git-hosting MCP server.
 2. If available: ask the human to explicitly authorize PR creation this turn. Never create,
    push, or merge without that explicit "yes" — a prior stage approval does not count.
-3. If unavailable or not authorized: write `pr-description.md` locally, state exactly what's
+3. If unavailable or not authorized: write `pr-description.md` under the current user story's
+   `output/<user-story-slug>/` folder (see `CLAUDE.md` §5 rule 6), state exactly what's
    missing, and list the manual steps (branch push command, PR creation URL/flow) the human
    would run themselves.
 

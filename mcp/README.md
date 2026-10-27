@@ -42,7 +42,7 @@ real values through environment variables, never literal secrets in the file.
   personal access token, scoped to the specific repository, supplied via `.env`, never inline
   in `.mcp.json`.
 - **Fallback**: if neither is available/authenticated, `pr-preparer` writes a local
-  `pr-description.md` and lists the manual steps to open the PR.
+  `output/<user-story-slug>/pr-description.md` and lists the manual steps to open the PR.
 
 ## Security Rules for All Integrations
 

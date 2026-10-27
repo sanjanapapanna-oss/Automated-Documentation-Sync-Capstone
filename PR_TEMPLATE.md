@@ -36,5 +36,6 @@ counts, exit codes. Link a real CI run only if one exists — omit the field oth
 - [ ] Documentation (`README.md` / `CHANGELOG.md`) updated
 
 ---
-*Commits included:* {{real `git log` output}}
-*Files changed:* {{real `git diff --stat` output}}
+
+_Commits included:_ {{real `git log` output}}
+_Files changed:_ {{real `git diff --stat` output}}

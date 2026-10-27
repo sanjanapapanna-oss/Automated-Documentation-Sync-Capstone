@@ -7,13 +7,22 @@
  */
 const SECRET_PATTERNS = [
   { name: 'AWS Access Key', re: /AKIA[0-9A-Z]{16}/ },
-  { name: 'AWS Secret Key assignment', re: /aws(.{0,20})?secret(.{0,20})?=\s*['"][A-Za-z0-9/+=]{40}['"]/i },
+  {
+    name: 'AWS Secret Key assignment',
+    re: /aws(.{0,20})?secret(.{0,20})?=\s*['"][A-Za-z0-9/+=]{40}['"]/i,
+  },
   { name: 'Generic private key block', re: /-----BEGIN (RSA |EC |OPENSSH |)PRIVATE KEY-----/ },
   { name: 'Slack token', re: /xox[baprs]-[0-9A-Za-z-]{10,}/ },
   { name: 'GitHub token', re: /gh[pousr]_[A-Za-z0-9]{30,}/ },
-  { name: 'Atlassian API token assignment', re: /(JIRA|CONFLUENCE)_API_TOKEN\s*=\s*['"]?[A-Za-z0-9]{10,}['"]?/i },
+  {
+    name: 'Atlassian API token assignment',
+    re: /(JIRA|CONFLUENCE)_API_TOKEN\s*=\s*['"]?[A-Za-z0-9]{10,}['"]?/i,
+  },
   { name: 'Generic bearer token', re: /Bearer\s+[A-Za-z0-9\-._~+/]{20,}=*/ },
-  { name: 'Generic API key assignment', re: /\b(api[_-]?key|secret|token|password)\b\s*[:=]\s*['"][^'"\s]{12,}['"]/i },
+  {
+    name: 'Generic API key assignment',
+    re: /\b(api[_-]?key|secret|token|password)\b\s*[:=]\s*['"][^'"\s]{12,}['"]/i,
+  },
 ];
 
 function readStdin() {

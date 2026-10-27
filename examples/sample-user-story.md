@@ -24,6 +24,7 @@ this in by hand after each significant change, and it drifts out of date within 
 
 We want a repeatable way to point the tool at (a) the master template and (b) a service's
 source repository, and get back a populated manifest that:
+
 - Keeps the template's exact section structure and order.
 - Only states facts it can actually point to in the source (a file, a config value, a
   dependency manifest entry).
