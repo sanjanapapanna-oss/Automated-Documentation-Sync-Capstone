@@ -53,12 +53,20 @@ production dependencies during Code Review; added `@vitest/coverage-v8`), `tscon
 **Also in this PR**: a fix for an unresolved-merge-conflict-marker corruption discovered in
 `README.md` while preparing this submission (it only ever existed in a merge commit on the
 original repository's `main`, never on this branch's own history — this branch is built from
-the clean pre-merge commit), plus a Prettier formatting fix for two report files, both in
-commit `113c979`.
+the clean pre-merge commit), plus a Prettier formatting fix for two report files (commit
+`113c979`); a corrected coverage figure and diff-stat cross-check in this PR description
+itself (`bf6ccfa`); a GitHub Actions CI workflow (typecheck/lint/format/build/test on every
+push and PR, with a coverage-report artifact upload) and status badge (`31ad2da`); and a
+restructuring of every per-run pipeline artifact from the repository root into
+`output/<user-story-slug>/`, so multiple user-story runs can coexist without overwriting each
+other's `requirements.md`/`architecture.md`/etc. — this updates `CLAUDE.md`, every agent and
+command definition, the `verification-gate` hook (which now scans `output/*/` instead of a
+hardcoded root path), and the docs to match, and migrates this story's own artifacts into
+`output/automated-technical-documentation-sync-v1/` (`90dc17b`).
 
-Full per-commit breakdown: **11 commits, 72 files changed, +8,059/−75 lines** — verified via
-`git diff --shortstat 1d90d4c feature/documentation-sync` (see "Commits Included" below for
-the exact list).
+Full per-commit breakdown: **14 commits, 79 files changed, +8,204/−140 lines** — verified via
+`git diff --shortstat capstone/main feature/documentation-sync` (see "Commits Included" below
+for the exact list).
 
 ## Test Evidence
 
@@ -126,9 +134,9 @@ commands executed directly in this session.
 
 ## Commits Included
 
-11 commits, `1d90d4c..113c979` (`main` on this repository is `1d90d4c` — the scaffold commit
-— so this is everything from `4464abe` onward: all 8 SDLC stages, plus the README/formatting
-fix):
+14 commits, `capstone/main..feature/documentation-sync` (`capstone/main` is `1d90d4c` — the
+scaffold commit — so this is everything from `4464abe` onward: all 8 SDLC stages, the
+README/formatting fix, CI pipeline, and the output-folder restructuring):
 
 ```
 4464abe Add Stage 1 requirements for Automated Technical Documentation Sync v1
@@ -142,9 +150,12 @@ bd2fc28 Add subprocess regression test, coverage tooling, and a string-bin fix
 e0d3e4e Add Stage 7 verification report
 ad60f07 Complete Stage 8: prepare PR artifacts (no gh CLI, no remote configured)
 113c979 Update README accuracy and PR description for capstone submission
+bf6ccfa Finalize PR description: correct coverage stat and verify diff stats via GitHub compare API
+31ad2da Add GitHub Actions CI pipeline and status badge
+90dc17b Move per-run pipeline artifacts under output/<user-story-slug>/
 ```
 
 ## Files Changed
 
-**72 files changed, +8,059/−75 lines** (`git diff --shortstat 1d90d4c feature/documentation-sync`,
-cross-checked against GitHub's own compare API) — grouped summary in "Changes Made" above.
+**79 files changed, +8,204/−140 lines** (`git diff --shortstat capstone/main
+feature/documentation-sync`) — grouped summary in "Changes Made" above.

@@ -114,11 +114,11 @@ auditable.
 
 See `mcp/README.md` for full setup instructions. Summary:
 
-| Source         | MCP-backed path                                                     | Fallback (used today)                        |
-| -------------- | ------------------------------------------------------------------- | -------------------------------------------- |
-| Jira           | Atlassian/Jira MCP server (not configured)                          | Paste ticket text or point to a local export |
-| Confluence     | Atlassian/Confluence MCP server (not configured)                    | Paste page text or point to a local export   |
-| Word documents | —                                                                   | Read directly from a local file path         |
+| Source         | MCP-backed path                                                     | Fallback (used today)                                   |
+| -------------- | ------------------------------------------------------------------- | ------------------------------------------------------- |
+| Jira           | Atlassian/Jira MCP server (not configured)                          | Paste ticket text or point to a local export            |
+| Confluence     | Atlassian/Confluence MCP server (not configured)                    | Paste page text or point to a local export              |
+| Word documents | —                                                                   | Read directly from a local file path                    |
 | GitHub         | `gh` CLI auth (preferred) or GitHub MCP server (neither configured) | Local `output/<story>/pr-description.md` + manual steps |
 
 Nothing in this repository invents credentials or assumes a server is reachable — every
