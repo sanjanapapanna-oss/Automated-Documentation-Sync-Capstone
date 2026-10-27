@@ -20,7 +20,7 @@ the plan to part of the work.
 3. Present the task list with dependencies, flagging any task that touches a security
    boundary, external integration, or destructive operation.
 
-**Expected output**: `impl-plan.md` at the repository root.
+**Expected output**: `impl-plan.md` under `output/<user-story-slug>/`.
 
 **Validation rules**: every requirement maps to at least one task; every task has acceptance
 criteria and a verification command; blocked tasks are marked `BLOCKED` with a reason.

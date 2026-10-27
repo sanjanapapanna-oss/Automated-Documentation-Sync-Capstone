@@ -21,8 +21,8 @@ severity-rated findings.
    blocker).
 3. Confirm the final blocker list with the user before closing the stage.
 
-**Expected output**: `design-review.md`, plus any user-approved edits applied to
-`architecture.md`.
+**Expected output**: `design-review.md` under `output/<user-story-slug>/`, plus any
+user-approved edits applied to `architecture.md`.
 
 **Validation rules**: every finding has severity, evidence, impact, and recommended action;
 accepted risks are explicitly separated from unresolved blockers.

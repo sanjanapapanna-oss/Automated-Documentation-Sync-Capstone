@@ -42,5 +42,6 @@ and showing the output.
 
 ## Output
 
-Write `code-review-report.md` at the repository root. Report ready for human review; do not
-commit without explicit authorization.
+Write `code-review-report.md` under the current user story's `output/<user-story-slug>/`
+folder (see `CLAUDE.md` §5 rule 6). Report ready for human review; do not commit without
+explicit authorization.

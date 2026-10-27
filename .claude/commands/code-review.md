@@ -19,7 +19,7 @@ review.
    reruns the relevant check), or explicitly accept and document.
 3. Do not suppress any `Critical` finding without a recorded human decision.
 
-**Expected output**: `code-review-report.md`.
+**Expected output**: `code-review-report.md` under `output/<user-story-slug>/`.
 
 **Validation rules**: all nine review areas addressed; every finding has file:line evidence
 and a recommended fix; fixed findings show a rerun result.

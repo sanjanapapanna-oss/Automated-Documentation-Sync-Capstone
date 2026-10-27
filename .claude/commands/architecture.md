@@ -8,8 +8,9 @@ allowed-tools: Task, Read, Write, Grep, Glob
 
 **Purpose**: Produce `architecture.md` from the approved `requirements.md`.
 
-**Required input**: an approved `requirements.md` must exist at the repository root. Optional
-`$ARGUMENTS` for extra constraints/notes the user wants considered.
+**Required input**: an approved `requirements.md` must exist under the current user story's
+`output/<user-story-slug>/` folder (see `CLAUDE.md` §5 rule 6). Optional `$ARGUMENTS` for extra
+constraints/notes the user wants considered.
 
 **Steps**:
 
@@ -18,8 +19,8 @@ allowed-tools: Task, Read, Write, Grep, Glob
 3. Review the agent's "Unresolved Decisions" list with the user before treating the design as
    final.
 
-**Expected output**: `architecture.md` at the repository root, including a Mermaid component
-diagram and at least one data-flow diagram.
+**Expected output**: `architecture.md` under `output/<user-story-slug>/`, including a Mermaid
+component diagram and at least one data-flow diagram.
 
 **Validation rules**: every component must map to a requirement; every external integration
 must state its MCP-backed and fallback paths; unresolved decisions must be listed explicitly,

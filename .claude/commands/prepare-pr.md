@@ -20,7 +20,7 @@ human-accepted exceptions). Optional `$ARGUMENTS` for the target branch.
 3. Check whether `gh` or a Git-hosting MCP server is available and authenticated.
 4. **Ask explicitly** whether the user authorizes creating the PR now. If yes and tooling is
    available, create it. If no, or tooling is unavailable, save the artifacts locally (e.g.
-   `pr-description.md`) and explain the exact remaining manual steps.
+   `output/<user-story-slug>/pr-description.md`) and explain the exact remaining manual steps.
 
 **Expected output**: PR description, changelog entry, outstanding-risks summary, commit/file
 list — plus an actual PR if authorized and tooling is available.

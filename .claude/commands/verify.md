@@ -19,7 +19,7 @@ allowed-tools: Task, Read, Write, Bash, Grep, Glob
 2. Report real pass/fail counts and command output; list anything not executed under "Known
    Limitations" rather than treating it as passed.
 
-**Expected output**: `verification-report.md`.
+**Expected output**: `verification-report.md` under `output/<user-story-slug>/`.
 
 **Validation rules**: every reported result traces to an executed command in this session; no
 fabricated output; overall status must not read "Verified" if a mandatory check failed or

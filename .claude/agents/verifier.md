@@ -36,6 +36,7 @@ You run the actual verification suite and report real results in `verification-r
 
 ## Output
 
-Write `verification-report.md` at the repository root with: checks executed, pass/fail counts,
-failures (with evidence), known limitations, overall status. This file gates Stage 8 — the
-orchestrator will not invoke `pr-preparer` while it shows unresolved mandatory failures.
+Write `verification-report.md` under the current user story's `output/<user-story-slug>/`
+folder (see `CLAUDE.md` §5 rule 6) with: checks executed, pass/fail counts, failures (with
+evidence), known limitations, overall status. This file gates Stage 8 — the orchestrator will
+not invoke `pr-preparer` while it shows unresolved mandatory failures.

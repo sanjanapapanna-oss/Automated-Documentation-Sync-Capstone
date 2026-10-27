@@ -85,6 +85,16 @@ by the commands in `.claude/commands/`. Hard rules, applicable to every stage:
    explicit human go-ahead in the current turn, regardless of earlier approvals.
 5. Each stage ends with a status report: what was produced, what was verified (with evidence),
    what remains open, and what approval is needed next.
+6. **Per-run stage outputs never live at the repository root.** Every generated artifact
+   (`requirements.md`, `architecture.md`, `design-review.md`, `impl-plan.md`,
+   `code-review-report.md`, `verification-report.md`, `pr-description.md`) is written under
+   `output/<user-story-slug>/`, where `<user-story-slug>` is a kebab-case slug derived from the
+   user story's title. Stage 1 (`requirements-analyst`) derives the slug once, from the story
+   it is given, and creates that folder; every later stage must locate the existing story
+   folder under `output/` (if exactly one exists, use it; if more than one exists, ask the
+   human which story is being continued; if none exists, stop — Stage 1 must run first) rather
+   than inventing a new slug. `PR_TEMPLATE.md`, `CHANGELOG.md`, and `README.md` are repo-wide
+   assets, not per-run artifacts, and stay at the repository root.
 
 ## 6. Evidence Standards
 
@@ -113,8 +123,10 @@ src/cli/            Thin CLI entry points invoked by commands/hooks
 tests/              unit/, integration/, fixtures/ (missing-field, empty-repo, malformed,
                     api-failure, happy-path cases)
 examples/           Sample user story + sample source repo used to demo the pipeline
-requirements.md, architecture.md, design-review.md, impl-plan.md   Per-run stage outputs
-CHANGELOG.md, README.md, PR_TEMPLATE.md
+output/<story>/     Per-run stage outputs: requirements.md, architecture.md, design-review.md,
+                    impl-plan.md, code-review-report.md, verification-report.md,
+                    pr-description.md — see §5 rule 6 for how <story> is derived
+CHANGELOG.md, README.md, PR_TEMPLATE.md   Repo-wide assets, not per-run artifacts
 ```
 
 ## 8. When In Doubt
